@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Faweb</title>
+    <meta name="description" content="Contacta a Faweb por correo, teléfono o formulario.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo Faweb" class="logo-img">
+            <div class="logo-text">
+                <h1>faweb</h1>
+                <span>DISEÑO Y DESARROLLO WEB</span>
+            </div>
+        </a>
+
+        <nav class="menu" id="menu" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Sobre nosotros</a>
+            <a href="contacto.html" class="active" aria-current="page">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="cuenta" id="cuenta">
+                <a href="login.html" class="cuenta-btn">👤 <span>Ingresar</span></a>
+            </div>
+            <a href="carrito.html" class="cart-button" aria-label="Ver carrito">
+                🛒 <span id="contador">0</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <p class="small-title">HABLEMOS</p>
+            <h2>Contacto</h2>
+            <p>¿Preguntas, pedidos especiales o ayuda para elegir? Escríbenos y te responderemos lo antes posible.</p>
+        </section>
+
+        <section class="section">
+            <div class="contact-grid">
+                <section class="form-box">
+                    <h3>Envíanos un mensaje</h3>
+                    <form id="form-contacto" novalidate>
+                        <div class="field">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="80" required>
+                        </div>
+                        <div class="field">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" autocomplete="email" maxlength="120" required>
+                        </div>
+                        <div class="field">
+                            <label for="interes">Me interesa</label>
+                            <select id="interes" name="interes">
+                                <option>Información general</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" maxlength="2000" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        <p class="form-note" id="form-nota"></p>
+                    </form>
+                </section>
+
+                <aside class="info-box">
+                    <h3>Información de contacto</h3>
+                    <div class="info-item"><span class="icon">📧</span><div><strong>Correo</strong><span data-config="correo">contacto@faweb.com</span></div></div>
+                    <div class="info-item"><span class="icon">📱</span><div><strong>WhatsApp / Teléfono</strong><span data-config="telefonoVisible">+57 300 000 0000</span></div></div>
+                    <div class="info-item"><span class="icon">📍</span><div><strong>Ubicación</strong><span data-config="ubicacion">Colombia</span></div></div>
+                    <div class="info-item"><span class="icon">❓</span><div><strong>¿Dudas rápidas?</strong><a class="card-link sin-margen" href="ayuda.html#preguntas">Ver preguntas frecuentes</a></div></div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (los datos de contacto se cargan desde MongoDB) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-header">
+                    <img src="img/logo.png" alt="Logo Faweb" class="footer-logo-img">
+                    <h2>faweb</h2>
+                </div>
+                <p>Productos seleccionados para acompañar cada momento especial.</p>
+            </div>
+
+            <nav class="footer-column" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Sobre nosotros</a>
+                <a href="carrito.html">Carrito</a>
+            </nav>
+
+            <nav class="footer-column" aria-label="Ayuda">
+                <h3>Ayuda</h3>
+                <a href="ayuda.html#preguntas">Preguntas frecuentes</a>
+                <a href="ayuda.html#envios">Envíos</a>
+                <a href="ayuda.html#devoluciones">Devoluciones</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>📧 <span data-config="correo">contacto@faweb.com</span></p>
+                <p>📱 <span data-config="telefonoVisible">+57 300 000 0000</span></p>
+                <p>📍 <span data-config="ubicacion">Colombia</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span data-anio>2026</span> <span data-config="nombreTienda">Faweb</span>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/nucleo.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>

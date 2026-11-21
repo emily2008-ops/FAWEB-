@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración | Faweb</title>
+    <link rel="stylesheet" href="./css/admin.css">
+
+    <!-- Estilos para el formulario de productos (son muchos campos) -->
+    <style>
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+            width: min(760px, 94vw);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 16px;
+        }
+
+        .form-grid .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-grid textarea {
+            width: 100%;
+            resize: vertical;
+        }
+
+        .subir-imagen {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .vista-previa {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #e5d5c8;
+        }
+
+        .subir-imagen-controles {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .boton-archivo {
+            cursor: pointer;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .estado-imagen {
+            font-size: 13px;
+            color: #7a6a5e;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Faweb</div>
+
+        <p class="menu-title">ADMINISTRACIÓN</p>
+
+        <button class="menu-option active" data-section="usuarios">
+            Usuarios
+        </button>
+
+        <button class="menu-option" data-section="productos">
+            Productos
+        </button>
+
+        <a href="../index.html" class="back-link">Volver a la tienda</a>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Panel de administración</h1>
+                <p>Gestiona la información de tu tienda</p>
+            </div>
+
+            <span class="admin-label">Administrador</span>
+        </header>
+
+        <!-- ========== USUARIOS ========== -->
+        <section id="usuarios" class="section active">
+            <div class="section-header">
+                <div>
+                    <h2>Usuarios</h2>
+                    <p>Usuarios registrados en la base de datos</p>
+                </div>
+
+                <div>
+                    <button class="primary-button" id="agregarUsuario">
+                        + Agregar usuario
+                    </button>
+
+                    <button class="secondary-button" id="recargarUsuarios">
+                        Actualizar
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaUsuarios">
+                        <tr>
+                            <td colspan="5">Cargando usuarios...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ========== PRODUCTOS ========== -->
+        <section id="productos" class="section">
+            <div class="section-header">
+                <div>
+                    <h2>Productos</h2>
+                    <p>Productos registrados en la base de datos</p>
+                </div>
+
+                <div>
+                    <button class="primary-button" id="agregarProducto">
+                        + Agregar producto
+                    </button>
+
+                    <button class="secondary-button" id="recargarProductos">
+                        Actualizar
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        <tr>
+                            <td colspan="6">Cargando productos...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== MODAL (sirve para crear y para editar) ========== -->
+    <div class="modal" id="modalEdicion">
+        <div class="modal-content">
+            <button class="close-button" id="cerrarModal" type="button">
+                &times;
+            </button>
+
+            <h2 id="tituloModal">Editar registro</h2>
+
+            <form id="formEdicion">
+                <div id="camposFormulario"></div>
+
+                <div class="modal-actions">
+                    <button type="button" class="secondary-button" id="cancelarEdicion">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="primary-button" id="botonGuardar">
+                        Guardar cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scrip/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Siempre cargar la versión más reciente (los cambios se ven al recargar) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Faweb</title>
+    <meta name="description"
+        content="Faweb: descubre nuestras categorías de productos para todos los gustos y presupuestos.">
+   
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="Captura.PNG" alt="Logo Faweb" class="logo-img"
+                onerror="this.src='https://via.placeholder.com/50/dfc2a9/ffffff?text=F'">
+            <div class="logo-text">
+                <h1>faweb</h1>
+                <span>DISEÑO Y DESARROLLO WEB</span>
+            </div>
+        </a>
+
+        <nav class="menu" id="menu" aria-label="Navegación principal">
+            <a href="index.html" class="active" aria-current="page">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Sobre nosotros</a>
+            <a href="contacto.html">Contacto</a>
+           
+        </nav>
+
+        <div class="header-actions">
+             <div class="cuenta" id="cuenta">
+                <a href="login.html" class="cuenta-btn">👤 <span>Ingresar</span></a>
+            </div>
+            <a href="carrito.html "cart-button" aria-label="Ver carrito">
+                🛒 <span id="contador">0</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="small-title">CALIDAD PARA CADA MOMENTO</p>
+                <h2>
+                    Encuentra el producto
+                    <span>perfecto para ti</span>
+                </h2>
+                <p>
+                    Descubre nuestras diferentes categorías y encuentra
+                    opciones pensadas para todos los gustos y presupuestos.
+                </p>
+                <a href="productos.html" class="hero-button">Explorar categorías</a>
+            </div>
+            <figure class="hero-image">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"
+                    alt="Productos elegantes">
+            </figure>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="section">
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="icon">✨</div>
+                    <h3>Productos seleccionados</h3>
+                    <p>Cada artículo es elegido con cuidado para ofrecerte lo mejor de cada categoría.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">🤝</div>
+                    <h3>Calidad y confianza</h3>
+                    <p>Trabajamos para que tu experiencia de compra sea clara, segura y agradable.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">🚚</div>
+                    <h3>Envíos a Colombia</h3>
+                    <p>Recibe tu pedido donde estés. <a href="ayuda.html#envios" class="card-link" style="margin:0">Ver
+                            envíos</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="categories" id="categorias">
+            <header class="section-title">
+                <p>ELIGE TU ESTILO</p>
+                <h2>Nuestras categorías</h2>
+                <span>Diferentes opciones para encontrar exactamente lo que buscas.</span>
+            </header>
+
+            <div class="cards" id="categories-container">
+                <p class="categories-loading">Cargando categorías...</p>
+            </div>
+        </section>
+
+        <!-- SOBRE NOSOTROS (resumen) -->
+        <section class="about">
+            <figure class="about-image">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=80"
+                    alt="Sobre nosotros" loading="lazy">
+            </figure>
+            <div class="about-content">
+                <p class="small-title">CONÓCENOS</p>
+                <h2>Sobre nosotros</h2>
+                <p>Somos una tienda dedicada a ofrecer productos cuidadosamente seleccionados para diferentes estilos,
+                    necesidades y presupuestos.</p>
+                <p>Nuestro objetivo es brindar una experiencia sencilla, agradable y confiable, permitiendo que cada
+                    persona encuentre productos que se adapten a sus gustos.</p>
+                <a href="nosotros.html" class="btn btn-primary" style="margin-top:10px">Conoce más</a>
+            </div>
+        </section>
+
+        <div style="height:90px"></div>
+        <section class="cta-band">
+            <h2>¿Tienes dudas sobre qué elegir?</h2>
+            <p>Escríbenos y te ayudamos a encontrar la categoría ideal para ti.</p>
+            <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-header">
+                    <img src="Captura.PNG" alt="Logo Faweb" class="footer-logo-img"
+                        onerror="this.src='https://via.placeholder.com/45/dfc2a9/ffffff?text=F'">
+                    <h2>faweb</h2>
+                </div>
+                <p>Productos seleccionados para acompañar cada momento especial.</p>
+            </div>
+
+            <nav class="footer-column" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Sobre nosotros</a>
+                <a href="carrito.html">Carrito</a>
+            </nav>
+
+            <nav class="footer-column" aria-label="Ayuda">
+                <h3>Ayuda</h3>
+                <a href="ayuda.html#preguntas">Preguntas frecuentes</a>
+                <a href="ayuda.html#envios">Envíos</a>
+                <a href="ayuda.html#devoluciones">Devoluciones</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>📧 contacto@faweb.com</p>
+                <p>📱 +57 300 000 0000</p>
+                <p>📍 Colombia</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Faweb. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./scrip/categorias.js"></script>
+    <script src="./scrip/nucleo.js"></script>
+</body>
+
+</html>

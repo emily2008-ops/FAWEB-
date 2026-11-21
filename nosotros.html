@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros | Faweb</title>
+    <meta name="description" content="Conoce a Faweb: nuestra historia, valores y compromiso con la calidad.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo Faweb" class="logo-img">
+            <div class="logo-text">
+                <h1>faweb</h1>
+                <span>DISEÑO Y DESARROLLO WEB</span>
+            </div>
+        </a>
+
+        <nav class="menu" id="menu" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html" class="active" aria-current="page">Sobre nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="cuenta" id="cuenta">
+                <a href="login.html" class="cuenta-btn">👤 <span>Ingresar</span></a>
+            </div>
+            <a href="carrito.html" class="cart-button" aria-label="Ver carrito">
+                🛒 <span id="contador">0</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <p class="small-title">CONÓCENOS</p>
+            <h2>Sobre nosotros</h2>
+            <p>Una tienda pensada para que encontrar lo que buscas sea sencillo, agradable y confiable.</p>
+        </section>
+
+        <section class="about" id="nosotros">
+            <figure class="about-image">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=80" alt="Equipo y propósito de Faweb">
+            </figure>
+            <div class="about-content">
+                <p class="small-title">NUESTRA HISTORIA</p>
+                <h2>Quiénes somos</h2>
+                <p>Somos una tienda dedicada a ofrecer páginas web cuidadosamente creadas para diferentes estilos, necesidades y presupuestos.</p>
+                <p>Nuestro objetivo es brindar una experiencia sencilla, agradable y confiable, permitiendo que cada persona encuentre una página web que se adapte a sus gustos.</p>
+                <div class="about-items">
+                    <div><strong>01</strong><span>Productos personalizados</span></div>
+                    <div><strong>02</strong><span>Calidad y confianza</span></div>
+                    <div><strong>03</strong><span>Experiencia agradable</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <header class="section-title">
+                <p>LO QUE NOS GUÍA</p>
+                <h2>Nuestros valores</h2>
+                <span>Los principios con los que trabajamos todos los días.</span>
+            </header>
+            <div class="values-grid">
+                <div class="benefit"><div class="icon">🎯</div><h3>Selección</h3><p>Elegimos cada producto pensando en tus necesidades, gustos y presupuesto.</p></div>
+                <div class="benefit"><div class="icon">🛡️</div><h3>Confianza</h3><p>Información clara, precios transparentes y soporte cuando lo necesites.</p></div>
+                <div class="benefit"><div class="icon">💛</div><h3>Experiencia</h3><p>Comprar debe ser fácil y agradable, desde el primer clic hasta tu puerta.</p></div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <h2>Descubre nuestras categorías</h2>
+            <p>Desde opciones accesibles hasta nuestra selección más exclusiva.</p>
+            <a href="productos.html" class="btn btn-primary">Ver productos</a>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (los datos de contacto se cargan desde MongoDB) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-header">
+                    <img src="img/logo.png" alt="Logo Faweb" class="footer-logo-img">
+                    <h2>faweb</h2>
+                </div>
+                <p>Productos seleccionados para acompañar cada momento especial.</p>
+            </div>
+
+            <nav class="footer-column" aria-label="Explorar">
+                <h3>Explorar</h3>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Sobre nosotros</a>
+                <a href="carrito.html">Carrito</a>
+            </nav>
+
+            <nav class="footer-column" aria-label="Ayuda">
+                <h3>Ayuda</h3>
+                <a href="ayuda.html#preguntas">Preguntas frecuentes</a>
+                <a href="ayuda.html#envios">Envíos</a>
+                <a href="ayuda.html#devoluciones">Devoluciones</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>📧 <span data-config="correo">contacto@faweb.com</span></p>
+                <p>📱 <span data-config="telefonoVisible">+57 300 000 0000</span></p>
+                <p>📍 <span data-config="ubicacion">Colombia</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span data-anio>2026</span> <span data-config="nombreTienda">Faweb</span>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/nucleo.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
